@@ -1,0 +1,21 @@
+:l spj
+vs:=seleccionar scod='x' s
+vp:=seleccionar pcod='x' p
+vj:=seleccionar jcod='x' j
+intersecar s s
+intersecar s vs
+unir p p
+unir p vp
+restar j  j
+restar j  vj
+restar vj j
+Natural s spj
+Seleccionar sCod='s2' ans
+Dividir spj proyectar [s.scod] s
+Cartesiano s cartesiano spj Natural p j
+unir seleccionar  situacion<=20 s seleccionar  situacion>20 s
+restar cartesiano s spj cartesiano s1 spj
+intersecar p seleccionar peso>=17 p
+cartesiano s renombrar s2 s
+renombrar s4 renombrarcol [(s2.scod,s2cod),(s2.snombre,s2nombre),(s2.situacion,s2situacion),(s2.ciudad,s2ciudad)] cartesiano s renombrar s2 s
+
